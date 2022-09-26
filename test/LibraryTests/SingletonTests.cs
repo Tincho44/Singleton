@@ -18,9 +18,10 @@ namespace LibraryTests
             {
                 System.Console.SetOut(sw);
                 string expected = "Hello World!\n";
-                Singleton<Greeter>.Instance.SayHiToTheWorld();
+                Singleton<Greeter>.GetInstance.SayHiToTheWorld();
                 Assert.That(sw.ToString(), Is.EqualTo(expected));
             }
         }
     }
 }
+
